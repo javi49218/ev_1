@@ -1,0 +1,288 @@
+/*_________ ESTILOS GENERALES ___________  */
+
+*
+{
+	padding: 0;
+	margin:0;
+	font-family: 'Dancing Script', cursive;
+}
+#contenido
+{
+	animation:arriba 1s;
+}
+body
+{
+	background-color: black;
+}
+header
+{
+	background-color: #5b7989;
+	padding: 10px;
+	border-radius: 10px 10px 0px 0px;
+	height: 60px;
+	margin:0 auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+header h1
+{
+	color:white;
+	float:left;
+	text-shadow: 2px 2px 2px #5b7989;	
+}
+header nav
+{
+	float:right;
+}
+header nav ul li
+{
+	display:inline-block;
+}
+header nav ul li a
+{
+	text-decoration: none;
+	color:white;
+	padding: 10px;
+	font-size: 30px;
+	transition:color .3s;
+
+}
+header nav ul li a:hover
+{
+	color:#1C1C1C;
+}
+#cuerpo img
+{
+	box-shadow: 2px 2px 2px #02010a;
+}
+#img_central
+{
+	background-color: #82c3a6;
+	padding: 15px;
+}
+#img_central img
+{
+	width: 80%;
+	margin-left: 10%;
+}
+#img_secundario
+{
+	display:flex;
+	background-color: #d5c75f;
+	border:1px solid white;
+}
+#img_secundario div
+{
+	width: 40%;
+	height: 40%;
+	margin-left: 6.66%;
+	margin-top: 10px;
+}
+#img_secundario div img
+{
+	width: 100%;
+	transition:transform .5s;
+}
+#img_secundario div a
+{
+	text-align: center;
+	font-size:1.6em;
+	text-align: center;
+	width: 20%;
+	display:block;
+	margin-left: 40%;
+	text-decoration: none;
+	transition:color .3s;
+}
+#paisajes img:hover
+{
+	-webkit-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	transform: rotate(10deg);
+	box-shadow: 5px 5px 5px #82c3a6;
+}
+#retratos img:hover
+{
+	-webkit-transform: translate(5px,20px);
+	-ms-transform: translate(5px,20px);
+	-o-transform: translate(5px,20px);
+	transform: translate(20px,-5px);
+	box-shadow: 2px 2px 2px #82c3a6;
+}
+#img_secundario div a:hover
+{
+	color:#1C1C1C;
+}
+footer
+{
+	background-color: #C6d5c5;
+	border-radius:0px 0px 10px 10px;
+	display:flex;
+}
+footer section
+{
+	width: 25%;
+	padding: 10px;
+}
+footer section h2,footer section p
+{
+	text-align: center;
+	font-weight: bold;
+}
+footer section ul li
+{
+	list-style: none;
+	margin-left: 23%;
+	margin-top: 10px;
+	font-weight: bold;
+	height: 24px;
+}
+#redes li:nth-child(1)
+{
+	background:url(../img/icon_facebook.png) no-repeat left center;
+	text-indent: 26px;
+}
+#redes li:nth-child(2)
+{
+	background:url(../img/icon_twitter.png) no-repeat left center;
+	text-indent: 26px;
+}
+#redes li:nth-child(3)
+{
+	background:url(../img/icon_instagram.png) no-repeat left center;
+	text-indent: 26px;
+}
+
+
+#sol_perez1,#sol_perez2
+{
+	background-color: #d5c75f;
+	display:flex;
+}
+#sol_perez1 img,#sol_perez2 img
+{
+	width: 25%;
+	height: 25%;
+	margin-left: 6.25%;
+	margin-top: 18px;
+	margin-bottom: 18px;
+}
+#cuerpo #sol_perez1 img:nth-child(1)
+{
+	-webkit-filter: blur(10px);
+	-o-filter: blur(10px);
+	filter: blur(10px);
+}
+#cuerpo #sol_perez1 img:nth-child(3)
+{
+	-webkit-filter: sepia(90%);
+	-o-filter: sepia(90%);
+	filter: sepia(90%);
+}
+#cuerpo #sol_perez1 img:nth-child(2),#cuerpo #sol_perez2 img:nth-child(1),#cuerpo #sol_perez2 img:nth-child(3)
+{
+	-webkit-filter: grayscale(100%);
+	 -o-filter: grayscale(100%);
+	 filter: grayscale(100%); 
+}
+/* __________ MEDIA QUERIES PARA ADAPTAR LA WEB SEGUN EL TAMAÑO DEL BROWSER ______________*/
+
+
+@media (min-width: 900px){
+	#cuerpo,header,footer
+	{
+		width: 900px;
+		margin:0 auto;
+	}
+}
+@media (max-width: 899px)
+{
+	#cuerpo,header
+	{
+		width: 100%;
+	}
+	header h1,header nav
+	{
+		width: 100%;
+		text-align: center;
+		float:none;
+	}
+	header
+	{
+		height: auto;
+	}
+	#img_secundario
+	{
+		display:block;
+	}
+	#paisajes,#retratos
+	{
+		width: 90% !important;
+		margin-left: 5% !important;
+		padding: 15px 0px 15px 0px;
+	}
+	#img_central
+	{
+		padding: 15px 0px 15px 0px;
+	}
+	#img_central img
+	{
+		width: 90%;
+		margin-left: 5%;
+	}
+	footer
+	{
+		display:block;
+	}
+	footer section
+	{
+		width: 100%;
+	}
+	footer section ul li
+	{
+		margin-left: 40%;
+		font-size: 1.1em;
+	}
+	footer section p
+	{
+		font-size: 1.1em;
+	}
+	footer section h2
+	{
+		font-size: 2.5em;
+	}
+
+	#sol_perez1,#sol_perez2
+	{
+		display:block;
+	}
+	#sol_perez1 img,#sol_perez2 img
+	{
+		width: 90%;
+		margin-left: 5%;
+	}
+
+}
+
+
+/*   _________ ANIMACION DE LA WEB AL INICIAR LA PAGINA ________  */
+@-webkit-keyframes arriba{
+	0%{
+		margin-top: 100%;
+	}
+	25%{
+		margin-top: 60%;
+	}
+	50%{
+		margin-top: 0%;
+	}
+	75%{
+		margin-top: -5%
+	}
+	100%{
+		margin-top:0%;
+	}
+
+}
